@@ -4,32 +4,32 @@ $(document).ready(function () {
     $(".main").addClass("in-view");
     $(".header").addClass("in-view");
 
-    var $animation_elements = [$('.services'), $('.ransom')];
-    var $window = $(window);
 
-    $window.on('scroll', check_if_in_view);
+    $(window).scroll(function() {
 
-    function check_if_in_view() {
-        var window_height = $window.height();
-        var window_top_position = $window.scrollTop();
-        var window_bottom_position = (window_top_position + window_height);
-      
-        $.each($animation_elements, function() {
-          var $element = $(this);
-          var element_height = $element.outerHeight();
-          var element_top_position = $element.offset().top;
-          var element_bottom_position = (element_top_position + element_height);
-      
-          if ((element_bottom_position >= window_top_position) &&
-              (element_top_position <= window_bottom_position)) {
-            $element.addClass('in-view');
-          } else {
-            $element.removeClass('in-view');
-          }
-        });
-    }
+        if ($('.services_block').visible(true)) {
+            $('.services').addClass("in-view");
+        }
 
+        if($('.offers_text_description').visible(true)) {
+            $(".offers").addClass("in-view");
+        }
 
+        if($('.media_img').visible(true)) {
+            $(".media").addClass("in-view");
+        }
+
+        if($('.ransom_content').visible(true)) {
+            $(".ransom").addClass("in-view");
+        }
+
+        if($('.advantages_block').visible(true)) {
+            $(".advantages").addClass("in-view");
+        }
+        
+
+    });
+    
     $('.main_slider').slick({
         dots: false,
         infinite: true,
