@@ -19,7 +19,7 @@ $(document).ready(function () {
             $(".media").addClass("in-view");
         }
 
-        if($('.ransom_content').visible(true)) {
+        if($('.ransom_title').visible(true)) {
             $(".ransom").addClass("in-view");
         }
 
