@@ -1072,13 +1072,13 @@ body {
   margin-top: 16px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .unique::after {
-    width: calc(100% - 170px);
-    right: 30px;
-    left: auto;
-    top: -90px;
+    display: none;
   }
+}
+
+@media (min-width: 1200px) {
   .unique_block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1132,11 +1132,6 @@ body {
 }
 
 @media (min-width: 1680px) {
-  .unique::before {
-    width: calc(100% - 438px);
-    right: 150px;
-    left: auto;
-  }
   .unique_block {
     margin-top: 100px;
     margin-left: 137px;
@@ -1184,7 +1179,7 @@ body {
 .services_title img {
   position: absolute;
   left: 0px;
-  bottom: -10px;
+  bottom: -14px;
   width: 80%;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -1320,6 +1315,9 @@ body {
 }
 
 @media (min-width: 768px) {
+  .services {
+    overflow-x: visible;
+  }
   .services::before {
     top: -90px;
   }
