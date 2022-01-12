@@ -78,4 +78,21 @@ $(document).ready(function () {
         $(".back_modal").removeClass("active");
     });
 
+    $('.product_content_img_for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        fade: true,
+        asNavFor: '.product_content_img_nav'
+    });
+
+    $('.product_content_img_nav').slick({
+        slidesToShow: 6,
+        slideToScroll: 1,
+        asNavFor: '.product_content_img_for',
+        centerMode: true,
+        focusOnSelect: true
+    });
+
 });
