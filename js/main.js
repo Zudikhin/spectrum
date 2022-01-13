@@ -29,6 +29,10 @@ $(document).ready(function () {
         
 
     });
+
+    $(".catalog_top_mobile_categories_current").click(function() {
+        $(this).parent().toggleClass("active");
+    });
     
     $('.main_slider').slick({
         dots: false,
@@ -94,5 +98,15 @@ $(document).ready(function () {
         centerMode: true,
         focusOnSelect: true
     });
+
+
+    $('.catalog_block_list_item_slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        fade: true
+    });
+
 
 });
